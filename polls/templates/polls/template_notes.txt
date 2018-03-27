@@ -1,0 +1,5 @@
+Leaving out this:
+
+action="{% url 'polls:vote' question.id %}" method="post" 
+
+out of detail.html, <form xxx >

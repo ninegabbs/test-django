@@ -18,8 +18,11 @@ from django.urls import path
 
 from polls import views
 
+app_name = 'polls'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.IndexView.as_view(), name='index'),
     #path('', views.index),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+#     path('<int:question_id>/vote', views.vote, name='vote'),
 ]
